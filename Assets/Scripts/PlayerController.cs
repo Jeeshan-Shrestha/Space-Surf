@@ -6,22 +6,28 @@ using UnityEngine.InputSystem;
 public class PlayerController : MonoBehaviour
 {
     
-    [SerializeField] float lerpSpeed = 15f;
-    [SerializeField] InputAction movement;
+    [Header("General Setup Settings")]
+    [Tooltip("How fast ship lerps to target rotation")] [SerializeField] float lerpSpeed = 15f;
+    [Tooltip("Input action for movement")] [SerializeField] InputAction movement;
 
     //for laster
-    [SerializeField] GameObject[] lasers;
+    [Header("Laser gun array")]
+   [Tooltip("Add all lasers in this array")] [SerializeField] GameObject[] lasers;
 
     [SerializeField] InputAction fire;
-    [SerializeField] float controlSpeed = 10f;
-    [SerializeField] float xRange = 9f; //go from  -value to +value
-    [SerializeField] float yRange = 4f; // go from - value to + value
+    [Tooltip("How fast ship moves up and down")] [SerializeField] float controlSpeed = 10f;
+
+    [Header("Screen position limits")]
+    [Tooltip("How much horizontal movement is allowed")] [SerializeField] float xRange = 9f; //go from  -value to +value
+    [Tooltip("How much vertical movement is allowed")] [SerializeField] float yRange = 4f; // go from - value to + value
 
     //Field for rotation 
+    [Header("Screen position based tuning")]
     [SerializeField] float positionPitchFactor = -2f;
-    [SerializeField] float controlPitchFactor = -15f;
-
     [SerializeField] float positionYawFactor = 2f;
+
+    [Header("Player input based tuning")]
+    [SerializeField] float controlPitchFactor = -15f;
     [SerializeField] float controlThrowFactor = -20f;
     float horizontalThrow, verticalThrow;
 
