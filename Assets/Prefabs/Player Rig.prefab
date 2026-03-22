@@ -218,9 +218,41 @@ PrefabInstance:
     serializedVersion: 3
     m_TransformParent: {fileID: 849934971478628199}
     m_Modifications:
+    - target: {fileID: 6504057041279979495, guid: dcdbafa8386db084794d27ea12244cf3, type: 3}
+      propertyPath: fire.m_Name
+      value: Fire
+      objectReference: {fileID: 0}
+    - target: {fileID: 6504057041279979495, guid: dcdbafa8386db084794d27ea12244cf3, type: 3}
+      propertyPath: lasers.Array.size
+      value: 2
+      objectReference: {fileID: 0}
+    - target: {fileID: 6504057041279979495, guid: dcdbafa8386db084794d27ea12244cf3, type: 3}
+      propertyPath: lasers.Array.data[0]
+      value: 
+      objectReference: {fileID: 4523930266406871514}
+    - target: {fileID: 6504057041279979495, guid: dcdbafa8386db084794d27ea12244cf3, type: 3}
+      propertyPath: lasers.Array.data[1]
+      value: 
+      objectReference: {fileID: 9101215621616201906}
+    - target: {fileID: 6504057041279979495, guid: dcdbafa8386db084794d27ea12244cf3, type: 3}
+      propertyPath: fire.m_SingletonActionBindings.Array.size
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 6504057041279979495, guid: dcdbafa8386db084794d27ea12244cf3, type: 3}
+      propertyPath: fire.m_SingletonActionBindings.Array.data[0].m_Id
+      value: a02f9649-26f6-495a-85f0-67a07a97b64f
+      objectReference: {fileID: 0}
+    - target: {fileID: 6504057041279979495, guid: dcdbafa8386db084794d27ea12244cf3, type: 3}
+      propertyPath: fire.m_SingletonActionBindings.Array.data[0].m_Path
+      value: <Mouse>/leftButton
+      objectReference: {fileID: 0}
+    - target: {fileID: 6504057041279979495, guid: dcdbafa8386db084794d27ea12244cf3, type: 3}
+      propertyPath: fire.m_SingletonActionBindings.Array.data[0].m_Action
+      value: Fire
+      objectReference: {fileID: 0}
     - target: {fileID: 8310193472532158436, guid: dcdbafa8386db084794d27ea12244cf3, type: 3}
       propertyPath: m_Name
-      value: StarSparrow2
+      value: PlayerShip
       objectReference: {fileID: 0}
     - target: {fileID: 8653785721221205342, guid: dcdbafa8386db084794d27ea12244cf3, type: 3}
       propertyPath: m_LocalPosition.x
@@ -270,5 +302,15 @@ PrefabInstance:
 --- !u!4 &803624504705508297 stripped
 Transform:
   m_CorrespondingSourceObject: {fileID: 8653785721221205342, guid: dcdbafa8386db084794d27ea12244cf3, type: 3}
+  m_PrefabInstance: {fileID: 8304462311447965335}
+  m_PrefabAsset: {fileID: 0}
+--- !u!1 &4523930266406871514 stripped
+GameObject:
+  m_CorrespondingSourceObject: {fileID: 5618058990797213517, guid: dcdbafa8386db084794d27ea12244cf3, type: 3}
+  m_PrefabInstance: {fileID: 8304462311447965335}
+  m_PrefabAsset: {fileID: 0}
+--- !u!1 &9101215621616201906 stripped
+GameObject:
+  m_CorrespondingSourceObject: {fileID: 968664358631693861, guid: dcdbafa8386db084794d27ea12244cf3, type: 3}
   m_PrefabInstance: {fileID: 8304462311447965335}
   m_PrefabAsset: {fileID: 0}

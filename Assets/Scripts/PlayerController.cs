@@ -9,6 +9,9 @@ public class PlayerController : MonoBehaviour
     [SerializeField] float lerpSpeed = 15f;
     [SerializeField] InputAction movement;
 
+    //for laster
+    [SerializeField] GameObject[] lasers;
+
     [SerializeField] InputAction fire;
     [SerializeField] float controlSpeed = 10f;
     [SerializeField] float xRange = 9f; //go from  -value to +value
@@ -103,10 +106,25 @@ public class PlayerController : MonoBehaviour
         //{
         //    Debug.Log("Shooting");
         //}
-        if(fire.WasPressedThisFrame())
+        if(fire.IsPressed())
         {
-            Debug.Log("Shooting");
+            ActivateOrDeactivateLasers(isActive: true);
+        }
+        else
+        {
+            ActivateOrDeactivateLasers(isActive: false);
         }
     }
+
+    void ActivateOrDeactivateLasers(bool isActive)
+    {
+        foreach (GameObject i in lasers)
+        {
+            var emissionModule = i.GetComponent<ParticleSystem>().emission;
+            emissionModule.enabled = isActive;
+        }
+    }
+
+  
 
 }
