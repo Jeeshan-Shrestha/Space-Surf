@@ -230,6 +230,10 @@ PrefabInstance:
       propertyPath: m_LocalPosition.z
       value: 0
       objectReference: {fileID: 0}
+    - target: {fileID: 5161080073394814305, guid: dcdbafa8386db084794d27ea12244cf3, type: 3}
+      propertyPath: crashParticles
+      value: 
+      objectReference: {fileID: 7069037763377261253}
     - target: {fileID: 6504057041279979495, guid: dcdbafa8386db084794d27ea12244cf3, type: 3}
       propertyPath: xRange
       value: 10
@@ -362,6 +366,11 @@ Transform:
 --- !u!1 &4523930266406871514 stripped
 GameObject:
   m_CorrespondingSourceObject: {fileID: 5618058990797213517, guid: dcdbafa8386db084794d27ea12244cf3, type: 3}
+  m_PrefabInstance: {fileID: 8304462311447965335}
+  m_PrefabAsset: {fileID: 0}
+--- !u!198 &7069037763377261253 stripped
+ParticleSystem:
+  m_CorrespondingSourceObject: {fileID: 1235433381258708050, guid: dcdbafa8386db084794d27ea12244cf3, type: 3}
   m_PrefabInstance: {fileID: 8304462311447965335}
   m_PrefabAsset: {fileID: 0}
 --- !u!1 &9101215621616201906 stripped

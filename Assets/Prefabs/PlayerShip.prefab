@@ -374,6 +374,10 @@ PrefabInstance:
       propertyPath: m_LocalEulerAnglesHint.z
       value: 0
       objectReference: {fileID: 0}
+    - target: {fileID: 4252538157470824219, guid: 4b8580fa132e04cbeabe25cd467d4e23, type: 3}
+      propertyPath: CollisionModule.enabled
+      value: 1
+      objectReference: {fileID: 0}
     - target: {fileID: 6581881296261872030, guid: 4b8580fa132e04cbeabe25cd467d4e23, type: 3}
       propertyPath: m_Name
       value: LaserLeft
