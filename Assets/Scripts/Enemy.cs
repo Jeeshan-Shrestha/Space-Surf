@@ -7,16 +7,27 @@ public class Enemy : MonoBehaviour
 
     [SerializeField] GameObject deathVFX;
     [SerializeField] GameObject hitVFX;
-    [SerializeField] Transform parent;
     [SerializeField] int ScorePerHit=15;
 
     [SerializeField] int hitPoints = 20;
-
+    
+    GameObject parentGameObject;
     ScoreBoard scoreBoard;
 
     private void Start() {
         //Look through all GameObjects in the scene and find the one that has the ScoreBoard script attached.
        scoreBoard = FindObjectOfType<ScoreBoard>();
+       parentGameObject = GameObject.FindWithTag("SpawnAtRunTime");
+       AddRigidbody();
+    }
+
+    private void AddRigidbody()
+    {
+        Rigidbody rb= gameObject.AddComponent<Rigidbody>(); //Adding rigidbody to the enemy so that it can collide with the particles and trigger the OnParticleCollision method
+       //GetComponent<Rigidbody>().useGravity = false; 
+       //Turn off gravity
+       rb.useGravity = false; 
+        
     }
     
     private void OnParticleCollision(GameObject other)
@@ -32,17 +43,17 @@ public class Enemy : MonoBehaviour
     {
         //Create VFX for hit effect
         GameObject vfx = Instantiate(hitVFX, transform.position, Quaternion.identity);
-        vfx.transform.parent = parent; //putting the vfx in the parent object to keep the hierarchy clean
+        vfx.transform.parent = parentGameObject.transform; //putting the vfx in the parentGameObject object to keep the hierarchy clean
         //Decrease enemy health
         hitPoints--;
-         //Increase Score when enemy is hit;
-        scoreBoard.IncreaseScore(ScorePerHit);
     }
 
     private void EnemyKilled()
     {
+        //Increase Score when enemy is killed;
+        scoreBoard.IncreaseScore(ScorePerHit);
         GameObject vfx = Instantiate(deathVFX, transform.position, Quaternion.identity); //Quaternion.identiy menas we dont need rotation
-        vfx.transform.parent = parent; //putting the vfx in the parent object to keep the hierarchy clean
+        vfx.transform.parent = parentGameObject.transform; //putting the vfx in the parentGameObject object to keep the hierarchy clean
         Destroy(gameObject);
     }
 }

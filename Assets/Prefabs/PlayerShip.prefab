@@ -161,7 +161,7 @@ MonoBehaviour:
     m_Interactions: 
     m_SingletonActionBindings: []
     m_Flags: 0
-  controlSpeed: 10
+  controlSpeed: 12
   xRange: 9
   yRange: 7
   positionPitchFactor: -5
